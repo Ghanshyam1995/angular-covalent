@@ -22,6 +22,8 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_register_register_component__ = __webpack_require__("../../../../../src/app/register/register.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_buttons_buttons_component__ = __webpack_require__("../../../../../src/app/buttons/buttons.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_app_card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -29,6 +31,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -42,7 +46,9 @@ var routes = [
         path: 'home', component: __WEBPACK_IMPORTED_MODULE_2_app_home_home_component__["a" /* HomeComponent */]
     },
     { path: 'signup', component: __WEBPACK_IMPORTED_MODULE_3_app_register_register_component__["a" /* RegisterComponent */] },
-    { path: 'buttons', component: __WEBPACK_IMPORTED_MODULE_4_app_buttons_buttons_component__["a" /* ButtonsComponent */] }
+    { path: 'buttons', component: __WEBPACK_IMPORTED_MODULE_4_app_buttons_buttons_component__["a" /* ButtonsComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_5_app_login_login_component__["a" /* LoginComponent */] },
+    { path: 'card', component: __WEBPACK_IMPORTED_MODULE_6_app_card_card_component__["a" /* CardComponent */] },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -81,7 +87,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div layout=\"row\">\r\n    <button md-button color=\"primary\" (click)=\"toggleConfigFullscreenDemo()\" class=\"text-upper\">Toggle Loader</button>\r\n</div>\r\n<td-layout mode=\"side\" align=\"start\" [opened]=\"true\">\r\n    <div td-sidenav-content>\r\n        <img src=\"https://angular.io/assets/images/logos/angular/angular.svg\" />\r\n        <td-expansion-panel-group>\r\n            <td-expansion-panel label=\"Components\">\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button [routerLink]=\"['buttons']\" routerLinkActive=\"active-link\">Buttons</button>\r\n                </div>\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button>Forms</button>\r\n                </div>\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button [routerLink]=\"['home']\" routerLinkActive=\"active-link\">Datatables</button>\r\n                </div>\r\n\r\n            </td-expansion-panel>\r\n            <td-expansion-panel label=\"Pages\">\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button>Login</button>\r\n                </div>\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button [routerLink]=\"['signup']\" routerLinkActive=\"active-link\">Signup</button>\r\n                </div>\r\n            </td-expansion-panel>\r\n            <td-expansion-panel label=\"Yet another label goes here\">\r\n                <div class=\"md-padding\">\r\n                    <h3 class=\"md-subhead\">md-padding class</h3>\r\n                </div>\r\n            </td-expansion-panel>\r\n        </td-expansion-panel-group>\r\n    </div>\r\n    <td-layout-nav toolbarTitle=\"Home\">\r\n        <router-outlet></router-outlet>\r\n    </td-layout-nav>\r\n\r\n</td-layout>"
+module.exports = "<div layout=\"row\">\r\n    <button md-button color=\"primary\" (click)=\"toggleConfigFullscreenDemo()\" class=\"text-upper\">Toggle Loader</button>\r\n</div>\r\n<td-layout mode=\"side\" align=\"start\" [opened]=\"true\">\r\n    <div td-sidenav-content>\r\n        <img src=\"https://angular.io/assets/images/logos/angular/angular.svg\" />\r\n        <td-expansion-panel-group>\r\n            <td-expansion-panel label=\"Components\">\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button [routerLink]=\"['buttons']\" routerLinkActive=\"active-link\">Buttons</button>\r\n                </div>\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button [routerLink]=\"['card']\" routerLinkActive=\"active-link\">Cards</button>\r\n                </div>\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button [routerLink]=\"['home']\" routerLinkActive=\"active-link\">Datatables</button>\r\n                </div>\r\n\r\n            </td-expansion-panel>\r\n            <td-expansion-panel label=\"Pages\">\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button [routerLink]=\"['login']\" routerLinkActive=\"active-link\">Login</button>\r\n                </div>\r\n                <div class=\"innerMenuItem\">\r\n                    <button md-raised-button [routerLink]=\"['signup']\" routerLinkActive=\"active-link\">Signup</button>\r\n                </div>\r\n            </td-expansion-panel>\r\n\r\n        </td-expansion-panel-group>\r\n    </div>\r\n    <td-layout-nav toolbarTitle=\"Home\">\r\n        <router-outlet></router-outlet>\r\n    </td-layout-nav>\r\n\r\n</td-layout>"
 
 /***/ }),
 
@@ -156,6 +162,8 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ng2_smart_table__ = __webpack_require__("../../../../ng2-smart-table/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__buttons_buttons_component__ = __webpack_require__("../../../../../src/app/buttons/buttons.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -163,6 +171,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -190,7 +200,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_12__register_register_component__["a" /* RegisterComponent */],
             __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__buttons_buttons_component__["a" /* ButtonsComponent */]
+            __WEBPACK_IMPORTED_MODULE_15__buttons_buttons_component__["a" /* ButtonsComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__card_card_component__["a" /* CardComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_10__covalent_core__["a" /* CovalentLoadingModule */],
@@ -311,6 +323,67 @@ ButtonsComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/card/card.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/card/card.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<md-card>\n    <md-card-header>\n        <md-card-title>Card</md-card-title>\n        <md-card-subtitle>Card Subtitle</md-card-subtitle>\n    </md-card-header>\n    <img md-card-image src=\"https://angular.io/assets/images/logos/angular/angular.svg\">\n    <md-card-content>\n        <p style=\"padding:10px;font-size:1.2em;\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently\n            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point\n            of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem\n            Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\n        </p>\n    </md-card-content>\n    <md-card-actions align=\"end\">\n        <button md-button color=\"warn\">Action1</button>\n        <button md-button color=\"accent\">Action2</button>\n\n    </md-card-actions>\n\n</md-card>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/card/card.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CardComponent = (function () {
+    function CardComponent() {
+    }
+    CardComponent.prototype.ngOnInit = function () {
+    };
+    return CardComponent;
+}());
+CardComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+        selector: 'app-card',
+        template: __webpack_require__("../../../../../src/app/card/card.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/card/card.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], CardComponent);
+
+//# sourceMappingURL=card.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/home/home.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -370,20 +443,10 @@ var HomeComponent = (function () {
         this.data = [
             { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
             { Name: 'Neeraj Singh', Email: 'neeraj003@gmail.com', Mobile: '9760822095' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-            { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
+            { Name: 'Laxman Singh', Email: 'Laxman.bisht@gmail.com', Mobile: '8798526874' },
+            { Name: 'Devesh Negi', Email: 'devesh.negi03@gmail.com', Mobile: '8791126837' },
+            { Name: 'Manish Singh Mehta', Email: 'manish.ronaldo12@gmail.com', Mobile: '8759871563' },
+            { Name: 'Abhishek Negi', Email: 'abh.negi12294@gmail.com', Mobile: '7895428135' },
         ];
         this.filteredData = this.data;
         this.filteredTotal = this.data.length;
@@ -482,6 +545,67 @@ HomeComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=home.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/login/login.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "md-card {\r\n    width: 600px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/login/login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<md-card>\n    <form>\n        <md-card-content>\n            <md-toolbar>Login</md-toolbar>\n\n            <div class=\"flexContainer\">\n                <md-input-container md-no-float>\n                    <input mdInput placeholder=\"Email\" />\n                </md-input-container>\n                <md-input-container md-no-float>\n                    <input mdInput placeholder=\"password\" />\n                </md-input-container>\n                <a href=\"#\">\n                    <h4>Forgot Password ?</h4>\n                </a>\n            </div>\n\n        </md-card-content>\n        <md-card-actions align=\"end\">\n            <button md-button md-raised-button type=\"submit\" color=\"primary\">Login</button>\n\n\n        </md-card-actions>\n    </form>\n</md-card>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/login/login.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LoginComponent = (function () {
+    function LoginComponent() {
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    return LoginComponent;
+}());
+LoginComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+        selector: 'app-login',
+        template: __webpack_require__("../../../../../src/app/login/login.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/login/login.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], LoginComponent);
+
+//# sourceMappingURL=login.component.js.map
 
 /***/ }),
 
