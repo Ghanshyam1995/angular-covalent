@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+html .mat-card md-card-content {
+    padding: 0!important;
+}
+
+.flexContainer {
+    display: flex;
+    margin: 16px;
+    flex-direction: column;
+}
+
+.flexInner {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.flexInput {
+    flex: 1;
+}
+
+md-sidenav {
+    width: 250px!important;
+}
+
+.innerMenuItem {
+    text-align: center;
+}
+
+.innerMenuItem button {
+    width: 100%;
+    padding: 10px;
+}
+
+.active-link {
+    text-decoration: underline!important;
+    color: #1976d2!important;
+    font-weight: 900!important;
+}

@@ -1,0 +1,49 @@
+<md-card>
+    <form>
+        <md-card-content>
+            <md-toolbar>Signup</md-toolbar>
+
+            <div class="flexContainer">
+                <div class="flexInner">
+                    <md-input-container class="flexInput">
+                        <input mdInput placeholder="First Name" />
+                    </md-input-container>
+                    <md-input-container class="flexInput">
+                        <input mdInput placeholder="Last Name" />
+                    </md-input-container>
+                </div>
+                <md-input-container>
+                    <input mdInput placeholder="Email" />
+                </md-input-container>
+                <div class="flexInner">
+                    <md-input-container style="flex:1">
+                        <input mdInput placeholder="Age" type="number" />
+                    </md-input-container>
+                    <md-input-container style="flex:2">
+                        <input mdInput placeholder="Mobile" />
+                    </md-input-container>
+                </div>
+                <md-input-container>
+                    <input mdInput placeholder="password" />
+                </md-input-container>
+
+                <md-input-container tdFileDrop [disabled]="disabled" (fileDrop)="files = $event" (click)="fileInput.inputElement.click()" (keyup.enter)="fileInput.inputElement.click()" (keyup.delete)="fileInput.clear()" (keyup.backspace)="fileInput.clear()" flex>
+                    <input mdInput placeholder="select or drop files" [value]="files?.length ? (files?.length + ' files') : files?.name" readonly/>
+                </md-input-container>
+                <button md-icon-button *ngIf="files" (click)="fileInput.clear()" (keyup.enter)="fileInput.clear()">
+    <md-icon>cancel</md-icon>
+  </button>
+                <td-file-input class="push-left-sm push-right-sm" #fileInput [(ngModel)]="files" name="files">
+                    <md-icon>folder</md-icon>
+                    <span class="text-upper">Browse...</span>
+                </td-file-input>
+            </div>
+
+        </md-card-content>
+        <md-card-actions align="end">
+            <button md-button md-raised-button type="submit" color="primary">Signup</button>
+            <button md-raised-button type="reset">Reset</button>
+
+        </md-card-actions>
+    </form>
+</md-card>

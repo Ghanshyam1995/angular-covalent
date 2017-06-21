@@ -1,4 +1,39 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<div layout="row">
+    <button md-button color="primary" (click)="toggleConfigFullscreenDemo()" class="text-upper">Toggle Loader</button>
+</div>
+<td-layout mode="side" align="start" [opened]="true">
+    <div td-sidenav-content>
+        <img src="https://angular.io/assets/images/logos/angular/angular.svg" />
+        <td-expansion-panel-group>
+            <td-expansion-panel label="Components">
+                <div class="innerMenuItem">
+                    <button md-raised-button [routerLink]="['buttons']" routerLinkActive="active-link">Buttons</button>
+                </div>
+                <div class="innerMenuItem">
+                    <button md-raised-button>Forms</button>
+                </div>
+                <div class="innerMenuItem">
+                    <button md-raised-button [routerLink]="['home']" routerLinkActive="active-link">Datatables</button>
+                </div>
+
+            </td-expansion-panel>
+            <td-expansion-panel label="Pages">
+                <div class="innerMenuItem">
+                    <button md-raised-button>Login</button>
+                </div>
+                <div class="innerMenuItem">
+                    <button md-raised-button [routerLink]="['signup']" routerLinkActive="active-link">Signup</button>
+                </div>
+            </td-expansion-panel>
+            <td-expansion-panel label="Yet another label goes here">
+                <div class="md-padding">
+                    <h3 class="md-subhead">md-padding class</h3>
+                </div>
+            </td-expansion-panel>
+        </td-expansion-panel-group>
+    </div>
+    <td-layout-nav toolbarTitle="Home">
+        <router-outlet></router-outlet>
+    </td-layout-nav>
+
+</td-layout>
