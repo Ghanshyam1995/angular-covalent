@@ -14,12 +14,16 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { LoginComponent } from './login/login.component';
+import { CardComponent } from './card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     HomeComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    LoginComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,CovalentLoadingModule,

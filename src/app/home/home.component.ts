@@ -42,20 +42,10 @@ export class HomeComponent implements OnInit {
   private data: any[] = [
     { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
     { Name: 'Neeraj Singh', Email: 'neeraj003@gmail.com', Mobile: '9760822095' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
+     { Name: 'Laxman Singh', Email: 'Laxman.bisht@gmail.com', Mobile: '8798526874' },
+     { Name: 'Devesh Negi', Email: 'devesh.negi03@gmail.com', Mobile: '8791126837' },
+     { Name: 'Manish Singh Mehta', Email: 'manish.ronaldo12@gmail.com', Mobile: '8759871563' },
+     { Name: 'Abhishek Negi', Email: 'abh.negi12294@gmail.com', Mobile: '7895428135' },
    
   ];
   filteredData: any[] = this.data;

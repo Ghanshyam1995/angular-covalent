@@ -24,6 +24,10 @@ md-sidenav {
     width: 250px!important;
 }
 
+.mat-sidenav {
+    overflow-y: hidden!important;
+}
+
 .innerMenuItem {
     text-align: center;
 }
