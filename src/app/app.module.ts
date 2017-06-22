@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { CardComponent } from './card/card.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserService } from "app/user.service";
+import { DashBoardComponent } from './dash-board/dash-board.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { UserService } from "app/user.service";
     ButtonsComponent,
     LoginComponent,
     CardComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DashBoardComponent
   ],
   imports: [
     BrowserModule,CovalentLoadingModule,

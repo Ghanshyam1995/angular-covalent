@@ -6,6 +6,7 @@ import { ButtonsComponent } from "app/buttons/buttons.component";
 import { LoginComponent } from "app/login/login.component";
 import { CardComponent } from "app/card/card.component";
 import { NotFoundComponent } from "app/not-found/not-found.component";
+import { DashBoardComponent } from "app/dash-board/dash-board.component";
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
    {path:'buttons',component:ButtonsComponent},
    {path:'login',component:LoginComponent},
    {path:'card',component:CardComponent},
+   {path:'dashboard',component:DashBoardComponent},
    {path:'**',component:NotFoundComponent}
 ];
 
