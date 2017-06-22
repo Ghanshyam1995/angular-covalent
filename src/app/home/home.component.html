@@ -7,9 +7,9 @@
                 <button md-icon-button color="accent" (click)="openAlert()"><md-icon>edit</md-icon></button>
             </div>
         </md-toolbar>
-        <td-search-box backIcon="arrow_back" placeholder="Search here" [showUnderline]="false" [debounce]="500" [alwaysVisible]="false" (searchDebounce)="searchInputTerm = $event" (search)="searchInputTerm = $event" (clear)="searchInputTerm = ''">
+        <td-search-box backIcon="arrow_back" placeholder="Search here" [showUnderline]="false" [debounce]="500" [alwaysVisible]="false">
         </td-search-box>
-        <td-data-table #dataTable [data]="filteredData" [columns]="columns" [selectable]="true" [multiple]="false" [sortable]="true" [sortBy]="sortBy" [sortOrder]="'ASC'" (sortChange)="sortEvent($event)" (rowSelect)="selectEvent($event)" (selectAll)="selectAllEvent($event)">
+        <td-data-table #dataTable [data]="filteredData" [columns]="columns" [selectable]="true" [multiple]="false" [sortable]="true" [sortBy]="sortBy" [sortOrder]="'ASC'" (sortChange)="sortEvent($event)" (rowSelect)="selectEvent($event)">
         </td-data-table>
         <div class="md-padding" *ngIf="!dataTable.hasData" layout="row" layout-align="center center">
             <h3>No results to display.</h3>

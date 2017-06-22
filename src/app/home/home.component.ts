@@ -1,22 +1,30 @@
-import { Component, ViewContainerRef ,OnInit } from '@angular/core';
+import { Component, ViewContainerRef, OnInit, OnDestroy } from '@angular/core';
 import { ITdDataTableColumn } from '@covalent/core'
 import { IPageChangeEvent,TdDialogService , TdDataTableSortingOrder, ITdDataTableSortChangeEvent, TdDataTableService } from '@covalent/core';
+import { UserService } from "app/user.service";
+import * as rx from "rxjs";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
+  subscription: rx.Subscription;
   _viewContainerRef: any;
   ngOnInit(): void {
+    debugger
+    //  this.GetAll();
      this.filter();
+     this.filteredData= this.data;
+     this.filteredTotal= this.data.length;
+
   }
   operation:boolean=false;
-  constructor(private _dialogService: TdDialogService,private _dataTableService: TdDataTableService) {
+  constructor(public userService:UserService,private _dialogService: TdDialogService,private _dataTableService: TdDataTableService) {
     
   }
- sortBy: string = 'Name';
+ sortBy: string = 'FirstName';
  searchTerm: string = '';
 
   sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Descending;
@@ -39,22 +47,20 @@ export class HomeComponent implements OnInit {
   
   }
   
-  private data: any[] = [
-    { Name: 'Ghanshyam Singh', Email: 'ghanshyam3303@gmail.com', Mobile: '8791790405' },
-    { Name: 'Neeraj Singh', Email: 'neeraj003@gmail.com', Mobile: '9760822095' },
-     { Name: 'Laxman Singh', Email: 'Laxman.bisht@gmail.com', Mobile: '8798526874' },
-     { Name: 'Devesh Negi', Email: 'devesh.negi03@gmail.com', Mobile: '8791126837' },
-     { Name: 'Manish Singh Mehta', Email: 'manish.ronaldo12@gmail.com', Mobile: '8759871563' },
-     { Name: 'Abhishek Negi', Email: 'abh.negi12294@gmail.com', Mobile: '7895428135' },
-   
+  public data: any[]=[
+    {ID:'1',FirstName:'Ghanshyam',LastName :'Singh',Email:'ghanshyam3303@gmail.com',Mobile:'8791790405',DOB:'03/03/1995'},
+    {ID:'2',FirstName:'Neeraj',LastName :'Singh',Email:'neeraj.singh03@gmail.com',Mobile:'9760822095',DOB:'08/19/1993'}
   ];
-  filteredData: any[] = this.data;
-  filteredTotal: number = this.data.length;
+  filteredData: any[] ;
+  filteredTotal: number ;
   
-  private columns: ITdDataTableColumn[] = [
-    { name: 'Name', label: 'Name', tooltip: 'Stock Keeping Unit', sortable: true },
-    { name: 'Email', label: 'Email' },
-    { name: 'Mobile', label:'Mobile' },
+  public columns: ITdDataTableColumn[] = [
+    {name:"ID",label:'ID',hidden:true},
+    { name: 'FirstName', label: 'First Name', tooltip: 'First Name', sortable: true },
+    { name: 'LastName', label: 'Last Name'},
+    { name: 'Email', label:'Email' },
+    { name: 'Mobile', label:'Mobile',tooltip:'(+91)(Number)' },
+    { name: 'DOB', label:'DOB',tooltip:'mm/dd/yyyy' },
   ];
 
  search(searchTerm: string): void {
@@ -108,6 +114,13 @@ export class HomeComponent implements OnInit {
       
   });
 }
+
+GetAll(){
+  this.subscription= this.userService.GetUsers().subscribe(res=>{
+    debugger;
+    this.data=res.json(); 
+ });
+}
  openAlert(): void {
     this._dialogService.openAlert({
       message: 'Sorry edit feature is currently not working',
@@ -130,6 +143,10 @@ export class HomeComponent implements OnInit {
       this.User={};
     }
     
+  }
+
+  ngOnDestroy():void{
+     // this.subscription.unsubscribe();
   }
   
 

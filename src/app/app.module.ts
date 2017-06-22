@@ -16,6 +16,8 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { LoginComponent } from './login/login.component';
 import { CardComponent } from './card/card.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { UserService } from "app/user.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { CardComponent } from './card/card.component';
     HomeComponent,
     ButtonsComponent,
     LoginComponent,
-    CardComponent
+    CardComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,CovalentLoadingModule,
@@ -41,7 +44,7 @@ import { CardComponent } from './card/card.component';
     HttpModule,
     AppRoutingModule,CovalentDataTableModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

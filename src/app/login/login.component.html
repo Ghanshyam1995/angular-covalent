@@ -1,14 +1,14 @@
 <md-card>
-    <form>
+    <form (ngSubmit)="Login(email.value,password.value)">
         <md-card-content>
             <md-toolbar>Login</md-toolbar>
 
             <div class="flexContainer">
                 <md-input-container md-no-float>
-                    <input mdInput placeholder="Email" />
+                    <input mdInput placeholder="Email" name="email" #email/>
                 </md-input-container>
                 <md-input-container md-no-float>
-                    <input mdInput placeholder="password" />
+                    <input mdInput placeholder="password" name="password" #password/>
                 </md-input-container>
                 <a href="#">
                     <h4>Forgot Password ?</h4>
