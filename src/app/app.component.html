@@ -1,7 +1,7 @@
 <div layout="row">
     <button md-button color="primary" (click)="toggleConfigFullscreenDemo()" class="text-upper">Toggle Loader</button>
 </div>
-<td-layout mode="side" align="start" [opened]="false">
+<td-layout mode="side" align="start" [opened]="false" #sidebar>
     <div td-sidenav-content>
         <img src="https://angular.io/assets/images/logos/angular/angular.svg" />
         <td-expansion-panel-group>
@@ -29,7 +29,9 @@
         </td-expansion-panel-group>
     </div>
     <td-layout-nav toolbarTitle="Home">
-        <router-outlet></router-outlet>
+        <div (swipeleft)="sidebar.toggle()" (swiperight)="sidebar.toggle()">
+            <router-outlet></router-outlet>
+        </div>
     </td-layout-nav>
 
 </td-layout>

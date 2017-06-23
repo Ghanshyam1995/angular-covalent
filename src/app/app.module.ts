@@ -20,6 +20,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { UserService } from "app/user.service";
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import "hammerjs";
 @NgModule({
   declarations: [
     AppComponent,
