@@ -42,3 +42,7 @@ md-sidenav {
     color: #1976d2!important;
     font-weight: 900!important;
 }
+
+.flexContainer {
+    margin-bottom: 15px;
+}

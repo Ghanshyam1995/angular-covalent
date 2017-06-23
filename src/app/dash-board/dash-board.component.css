@@ -1,9 +1,15 @@
-img {
-    width: 800px!important;
-    height: 500px!important;
+ul {
+    list-style-type: none;
+    text-transform: uppercase;
 }
 
-.imageSlider {
-    margin-left: auto;
-    margin-right: auto;
+li {
+    width: 200px;
+    padding: 10px 0;
+    background-color: hsla(173, 62%, 45%, 0.3);
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 7px hsla(173, 62%, 45%, 0.3);
+    cursor: pointer;
+    text-align: center
 }

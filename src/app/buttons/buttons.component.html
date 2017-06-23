@@ -3,12 +3,12 @@
 
         <md-toolbar>Buttons</md-toolbar>
         <h3>Simple Buttons:</h3>
-        <div style="display: flex;padding:10px 16px">
-            <div style="flex:1">
+        <div>
+            <div class="flexContainer" fxLayout fxLayoutGap="15px" fxFlexOffset="20px" fxLayout.xs="column" fxLayoutGap.xs="15px">
                 <button md-button>Default</button>
                 <button md-raised-button>Raised Button</button>
             </div>
-            <div style="flex:1">
+            <div class="flexContainer" fxLayout fxLayoutGap="15px" fxFlexOffset="20px" fxLayout.xs="column" fxLayoutGap.xs="15px">
                 <button md-raised-button color="primary">Primary</button>
                 <button md-raised-button color="accent">Accent</button>
                 <button md-raised-button color="warn">Warn</button>
@@ -39,9 +39,9 @@
             <div></div>
         </div>
         <h3>Buttons With Icon and Labels :</h3>
-        <div style="display:flex;padding:10px 16px">
+        <div>
 
-            <div>
+            <div class="flexContainer" fxLayout fxLayout.xs="column" fxLayoutGap="15px" fxLayoutGap.xs="15px">
                 <button md-button color="warn"><md-icon>favorite</md-icon></button>
                 <button md-button color="primary"><md-icon>favorite</md-icon>Default</button>
                 <button md-raised-button color="primary"><md-icon>favorite_border</md-icon>Default</button>

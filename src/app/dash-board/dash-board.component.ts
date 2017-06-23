@@ -1,47 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import {trigger,state,animate,style,transition} from "@angular/animations"
+import {trigger,state,group ,animate,style,transition} from "@angular/animations";
 @Component({
   selector: 'app-dash-board',
   templateUrl: './dash-board.component.html',
   styleUrls: ['./dash-board.component.css'],
   animations:[
-    trigger('sliderAnimation',[
-       transition(':enter',[
-         style({transform: 'translateX(100%)','zIndex':'0',opacity:0}),
-         animate('1s ease-in-out', style({transform: 'translateX(0%)',opacity:1,zIndex:999}))
-       ]),
-        transition(':leave', [
-        style({transform: 'translateX(0%)',opacity:1,zIndex:0}),
-        animate('1s ease-in-out', style({transform: 'translateX(-100%)',zIndex:0}))
+    trigger('itemAnim',[
+      transition(':enter', [
+      style({transform: 'translateX(-100%)'}),
+      animate(350)
+    ]),
+    transition(':leave', [
+      group([
+        animate('0.2s ease', style({
+          transform: 'translate(150px,25px)'
+        })),
+        animate('0.5s 0.2s ease', style({
+          opacity: 0
+        }))
       ])
+    ])
     ])
   ]
 })
 export class DashBoardComponent implements OnInit {
-
+  items:any[]=[];
   constructor() { }
-  showingImage:number=1;
-  totalImages:number=3;
+
   ngOnInit() {
-    setInterval(() => { 
-          if(this.showingImage=3)
-          this.showingImage=1;
-          this.showingImage++;
-     },5000);
+    
   }
-  NextImage()
+  addItem(item)
   {
-    debugger
-    if(this.showingImage==3)
-    this.showingImage=1;
-    else
-    this.showingImage++;
+    this.items.push(item);
   }
-  PrevImage(){
-     if(this.showingImage==1)
-    this.showingImage=3;
-    else
-    this.showingImage--;
-  }
+ removeItem(item)
+ {
+   this.items.pop();
+ }
 
 }

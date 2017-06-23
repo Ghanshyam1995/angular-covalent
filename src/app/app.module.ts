@@ -19,6 +19,7 @@ import { CardComponent } from './card/card.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserService } from "app/user.service";
 import { DashBoardComponent } from './dash-board/dash-board.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
   imports: [
     BrowserModule,CovalentLoadingModule,
     BrowserAnimationsModule ,CovalentExpansionPanelModule,
-    CovalentFileModule,
+    CovalentFileModule,FlexLayoutModule,
     CovalentMessageModule,
     CovalentPagingModule,
     CovalentLayoutModule,
