@@ -24,9 +24,6 @@ export class AppComponent {
     }, 1500);
   }
   
-  doThisOnSwipe()
-  {
-    debugger;
-  }
+  
  
 }

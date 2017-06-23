@@ -32,6 +32,7 @@ export class DashBoardComponent implements OnInit {
   }
   addItem(item)
   {
+    if(item!='')
     this.items.push(item);
   }
  removeItem(item)

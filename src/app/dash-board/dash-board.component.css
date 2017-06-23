@@ -3,6 +3,15 @@ ul {
     text-transform: uppercase;
 }
 
+input {
+    border: 0;
+    padding-left: 10px;
+}
+
+input:focus {
+    background-color: none;
+}
+
 li {
     width: 200px;
     padding: 10px 0;

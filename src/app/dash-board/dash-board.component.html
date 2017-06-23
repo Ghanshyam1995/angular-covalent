@@ -1,9 +1,12 @@
-<input #itemInput (keyup.enter)="addItem(itemInput.value); itemInput.value=''">
+<div fxLayout fxFlexOffset="400px">
 
-<button (click)="addItem(itemInput.value); itemInput.value=''">
-  Add
-</button>
+    <input #itemInput placeholder="Enter text" (keyup.enter)="addItem(itemInput.value); itemInput.value=''">
+    <button color="warn" md-icon-button (click)="addItem(itemInput.value); itemInput.value='';itemInput.focus()"><md-icon>add</md-icon></button>
 
-<ul *ngIf="items">
-    <li *ngFor="let item of items" (click)="removeItem(item)" [@itemAnim]>{{ item }}</li>
-</ul>
+</div>
+
+<div fxLayout fxFlexOffset="400px">
+    <ul *ngIf="items">
+        <li *ngFor="let item of items" (click)="removeItem(item)" [@itemAnim]>{{ item }}</li>
+    </ul>
+</div>

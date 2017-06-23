@@ -21,16 +21,18 @@ import { UserService } from "app/user.service";
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import "hammerjs";
+import { FormComponent } from './form/form.component';
+import { FormModule } from "app/form/form.module";
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
     HomeComponent,
     ButtonsComponent,
-    LoginComponent,
     CardComponent,
     NotFoundComponent,
-    DashBoardComponent
+    DashBoardComponent,
   ],
   imports: [
     BrowserModule,CovalentLoadingModule,
@@ -45,8 +47,9 @@ import "hammerjs";
     CovalentMarkdownModule,Ng2SmartTableModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpModule,FormModule,
     AppRoutingModule,CovalentDataTableModule
+    
   ],
   providers: [AuthService,UserService],
   bootstrap: [AppComponent]
