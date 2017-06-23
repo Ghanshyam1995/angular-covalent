@@ -7,7 +7,8 @@ Clone this repository and navigatte to the folder and run `npm i` command
 
 ## Hammer Js 
 Included HammerJs getsures to toggle sidenav 
-Check more details about hammer.js @`https://hammerjs.github.io/getting-started/`
+Check more details about hammer.js [HammerJs]
+(https://github.com/hammerjs/hammer.js/tree/master/) version 2.0.6.
 
 
 
