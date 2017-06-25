@@ -13,6 +13,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   subscription: rx.Subscription;
   _viewContainerRef: any;
   ngOnInit(): void {
+     this.userService.GetUsers().subscribe(res=>{
+       console.log(res);
+     });
      this.filter();
      this.filteredData= this.data;
      this.filteredTotal= this.data.length;

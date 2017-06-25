@@ -1,3 +1,4 @@
+
 <div layout="row">
     <button md-button color="primary" (click)="toggleConfigFullscreenDemo()" class="text-upper">Toggle Loader</button>
 </div>
@@ -19,7 +20,7 @@
             </td-expansion-panel>
             <td-expansion-panel label="Pages">
                 <div class="innerMenuItem">
-                    <button md-raised-button [routerLink]="['pages']" routerLinkActive="active-link">Login</button>
+                    <button md-raised-button [routerLink]="['pages/login']" routerLinkActive="active-link">Login</button>
                 </div>
                 <div class="innerMenuItem">
                     <button md-raised-button [routerLink]="['pages/signup']" routerLinkActive="active-link">Signup</button>
@@ -29,6 +30,7 @@
         </td-expansion-panel-group>
     </div>
     <td-layout-nav toolbarTitle="Home">
+        <app-loader></app-loader>
         <div (swipeleft)="sidebar.toggle()" (swiperight)="sidebar.toggle()">
             <router-outlet></router-outlet>
         </div>

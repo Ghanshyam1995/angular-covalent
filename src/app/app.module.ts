@@ -23,6 +23,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import "hammerjs";
 import { FormComponent } from './form/form.component';
 import { FormModule } from "app/form/form.module";
+import { LoaderService } from "app/loader.service";
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { FormModule } from "app/form/form.module";
     CardComponent,
     NotFoundComponent,
     DashBoardComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,CovalentLoadingModule,
@@ -51,7 +54,7 @@ import { FormModule } from "app/form/form.module";
     AppRoutingModule,CovalentDataTableModule
     
   ],
-  providers: [AuthService,UserService],
+  providers: [AuthService,UserService,LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
